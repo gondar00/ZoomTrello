@@ -1,0 +1,134 @@
+/* Custom styles
+-------------------------------------------------- */
+
+/* Board Styling*/
+.board {
+  background-color: #0077be;
+  border: 1px solid #2C3E50;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.board h4 {
+  color: #d3d3d3;
+}
+
+.board .story-container {
+  max-height: 700px;
+  width: 100%;
+  padding: 25px 0px;
+}
+
+.board .btn-default {
+  color: #2C3E50;
+}
+
+.board .btn-default:hover {
+  color: #2C3E50;
+}
+
+
+/* Story Card Styling */
+.story {
+  margin: 15px;
+  background-color: #FFF !important;
+  border: 0px;
+  border-left: 10px solid;
+  text-align: left;
+}
+
+.story h6 {
+  color: #34495E;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.story h6 > span {
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.story p {
+  color: #34495E;
+  font-size: 14px;
+}
+
+.white-card {
+  border-color: #FFF !important;
+}
+
+.red-card {
+  border-color: #D9534F !important;
+}
+
+.blue-card {
+  border-color: #3498DB !important;
+}
+
+.green-card {
+  border-color: #2ECC71 !important;
+}
+
+.yellow-card {
+  border-color: #F0AD4E !important;
+}
+
+.card-color {
+  color: #34495E;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.card-color .label {
+  padding: .3em .6em .3em;
+  border-radius: .35em;
+}
+
+.card-color .label-default {
+  background-color: #BDC3C7 !important;
+}
+
+.card-color .label-success {
+  background-color: #2ECC71 !important;
+}
+
+.card-color .label-warning {
+  background-color: #F0AD4E !important;
+}
+
+.card-color .label-danger {
+  background-color: #D9534F !important;
+}
+
+.card-color .label-primary {
+  background-color: #3498DB !important;
+}
+
+.card-title .title-form {
+  padding: 20px 0px 25px 0px;
+}
+
+.card-title .form-group {
+  padding-left: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.card-title .error {
+  font-size: 14px;
+  color: #D9534F;
+}
+
+.card-content {
+  padding-top: 10px;
+}
+
+.card-content .content-form {
+  padding-bottom: 10px;
+}
+
+.card-content .form-group {
+  margin-bottom: 10px !important;
+}

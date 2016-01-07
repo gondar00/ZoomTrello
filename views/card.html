@@ -1,0 +1,56 @@
+    <div ng-mouseenter="show=true" ng-mouseleave="show=false" class="story alert alert-warning {{story.color}}-card">
+      
+      <button ng-show="show" ng-click="trashStory(story, story.status)" type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+        <span class="sr-only">Close</span>
+      </button>
+
+      <div class="card-title">
+        <div ng-hide="titleEdit" class="ng-hide title-text">
+          <h6>
+            {{ story.title }} &nbsp;&nbsp;
+            <span ng-show="show" ng-click="editTitle()" class="glyphicon glyphicon-pencil"></span>
+          </h6>
+        </div>
+        
+        <div ng-show="titleEdit" class="title-form">
+          <form ng-submit="saveTitle(title)">
+            <div class="form-group col-md-8 form-group-sm" ng-class="{'has-error': card.title == '' }">
+              <input ng-model="card.title" type="text" class="form-control input-sm">
+              <span class="error" ng-show="card.title == ''">
+                Title is required.
+              </span>
+            </div>
+            <button ng-click="saveTitle(title)" ng-disabled="card.title == ''" type="submit" class="btn btn-primary btn-xs">Save</button>
+            <button ng-click="cancelTitle()" type="button" class="btn btn-default btn-xs">Cancel</button>
+          </form>
+        </div>
+      </div>
+     
+      <div class="card-content">
+        <div ng-hide="contentEdit" class="ng-hide content-text">
+          <p>
+            {{ story.content }}  &nbsp;&nbsp;
+            <span ng-show="show" ng-click="editContent()" class="glyphicon glyphicon-pencil"></span>
+          </p>
+        </div>
+        
+        <div ng-show="contentEdit" class="content-form">
+          <form ng-submit="saveContent(content)">
+            <div class="form-group form-group-sm">
+              <textarea ng-model="card.content" class="form-control" rows="3"></textarea>
+            </div>
+            <button ng-click="saveContent(content)" type="button" class="btn btn-primary btn-xs">Save</button>
+            <button ng-click="cancelContent()" type="submit" class="btn btn-default btn-xs">Cancel</button>
+          </form>
+        </div>
+      </div>
+
+      <div ng-show="show" class="card-color">
+        <span ng-click="changeColor('red')" class="label label-danger">URGENT</span>
+        <span ng-click="changeColor('yellow')" class="label label-warning">LOW PRIO</span>
+        <span ng-click="changeColor('green')" class="label label-success">TESTED</span>
+        <span ng-click="changeColor('blue')" class="label label-primary">VERIFIED</span>
+        <span ng-click="changeColor('white')" class="label label-default">DEFAULT</span>
+      </div>
+    </div>

@@ -1,0 +1,46 @@
+
+    <div class="container-fluid">
+
+      <div class="row">
+
+        <div class="col-md-4">
+          <div class="board">
+            <h4>To Do</h4>
+            <p>
+              <button ng-click="addStory('todo', sortedStories['todo'].length)" type="button" class="btn btn-primary btn-sm">Add Card</button>
+              <button ng-click="clearBoard('todo')" type="button" class="btn btn-default btn-sm">Clear Board</button>
+            </p>
+            <div ui-sortable="sortableStories[0]" nice-scroll ng-model="sortedStories['todo']" class="story-container">
+              <card-box ng-repeat="story in sortedStories['todo'] | orderBy: ['rank']| filter:search:strict" story="story" trash="trashStory"></card-box>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="board">
+            <h4>Doing</h4>
+            <p>
+              <button ng-click="addStory('doing', sortedStories['doing'].length)" type="button" class="btn btn-primary btn-sm">Add Card</button>
+              <button ng-click="clearBoard('doing')" type="button" class="btn btn-default btn-sm">Clear Board</button>
+            </p>
+            <div ui-sortable="sortableStories[1]" nice-scroll ng-model=" sortedStories['doing']" class="story-container">
+              <card-box ng-repeat="story in sortedStories['doing'] | orderBy: ['rank']| filter:search:strict" story="story" trash="trashStory"></card-box>
+            </div>
+          </div>
+       </div>
+
+        <div class="col-md-4">
+          <div class="board">
+            <h4>Done</h4>
+            <p>
+              <button ng-click="addStory('done', sortedStories['done'].length)" type="button" class="btn btn-primary btn-sm">Add Card</button>
+              <button ng-click="clearBoard('done')" type="button" class="btn btn-default btn-sm">Clear Board</button>
+            </p>
+            <div ui-sortable="sortableStories[2]" nice-scroll ng-model="sortedStories['done']" class="story-container">
+              <card-box ng-repeat="story in sortedStories['done'] | orderBy: ['rank']| filter:search:strict" story="story" trash="trashStory"></card-box>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div> <!-- /container -->
